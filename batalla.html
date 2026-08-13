@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PokéBattle - Batalla</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <h2>⚡ PokéBattle</h2>
+
+        <a href="index.html">Perfiles</a>
+
+        <a href="equipos.html">Equipos</a>
+
+        <a href="batalla.html">Batalla</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <h1>
+            PokéBattle Arena
+        </h1>
+
+        <p>
+            Batalla por turnos contra la IA.
+        </p>
+
+    </section>
+
+
+    <!-- SELECCIONAR EQUIPO -->
+
+    <section
+        id="inicioBatalla"
+        class="caja"
+    >
+
+        <h2>
+            Preparar batalla
+        </h2>
+
+        <select id="equipoBatalla">
+        </select>
+
+        <button id="comenzar">
+            Comenzar batalla
+        </button>
+
+        <p id="errorBatalla"></p>
+
+    </section>
+
+
+    <!-- BATALLA -->
+
+    <section
+        id="batalla"
+        class="oculto"
+    >
+
+        <div class="campo-batalla">
+
+
+            <!-- POKÉMON ENEMIGO -->
+
+            <div class="lado enemigo">
+
+                <div class="tarjeta-pokemon">
+
+                    <div class="nombre-pokemon">
+
+                        <span>
+                            IA
+                        </span>
+
+                        <strong id="nombreEnemigo">
+                            Pokémon
+                        </strong>
+
+                    </div>
+
+
+                    <div class="barra">
+
+                        <div
+                            id="barraEnemigo"
+                            class="vida"
+                        ></div>
+
+                    </div>
+
+
+                    <p id="vidaEnemigo">
+                        HP
+                    </p>
+
+                </div>
+
+
+                <img
+                    id="spriteEnemigo"
+                    class="sprite-enemigo"
+                    alt="Pokémon enemigo"
+                >
+
+            </div>
+
+
+            <!-- POKÉMON JUGADOR -->
+
+            <div class="lado jugador">
+
+                <img
+                    id="spriteJugador"
+                    class="sprite-jugador"
+                    alt="Pokémon jugador"
+                >
+
+
+                <div class="tarjeta-pokemon">
+
+                    <div class="nombre-pokemon">
+
+                        <span>
+                            JUGADOR
+                        </span>
+
+                        <strong id="nombreJugador">
+                            Pokémon
+                        </strong>
+
+                    </div>
+
+
+                    <div class="barra">
+
+                        <div
+                            id="barraJugador"
+                            class="vida"
+                        ></div>
+
+                    </div>
+
+
+                    <p id="vidaJugador">
+                        HP
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTROLES -->
+
+        <section class="controles-batalla">
+
+            <div class="registro">
+
+                <h3>
+                    Registro de batalla
+                </h3>
+
+                <div id="registro"></div>
+
+            </div>
+
+
+            <div class="ataques">
+
+                <h3>
+                    Elige un movimiento
+                </h3>
+
+                <div
+                    id="movimientos"
+                    class="botones-ataque"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section
+            id="resultado"
+            class="resultado oculto"
+        ></section>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        PokéBattle - Proyecto Final
+    </p>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+<script src="js/batalla.js"></script>
+
+</body>
+
+</html>
